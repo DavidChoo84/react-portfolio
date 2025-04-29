@@ -1,0 +1,208 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 50px;
+    flex-wrap: wrap; // responsive support
+  }
+  
+  .left-zone {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .text-zone {
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+    margin-top: 20px;
+  
+    ul {
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        opacity: 0;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+        clear: both;
+      }
+  
+      li.half {
+        width: 49%;
+        margin-left: 2%;
+        float: left;
+        clear: none;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 20px;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+  
+    .flat-button {
+      color: #00F5D4;
+      background: transparent;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid #00A8E8;
+      float: right;
+      border-radius: 4px;
+      animation: fadeIn 1s 1.8s backwards;
+      cursor: pointer;
+  
+      &:hover {
+        background: #00A8E8;
+        color: #333;
+      }
+    }
+  }
+  
+  .right-zone {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .info-box {
+    background: #000;
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    left:100px;
+    top:70px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: fadeIn 3s;
+    animation-fill-mode: forwards;
+  
+    .info-text {
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: 'Helvetica', sans-serif;
+  
+      h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #00F5D4;
+        text-align: center;
+      }
+  
+      p {
+        margin: 5px 0;
+      }
+    }
+  
+    .info-image {
+      width: 100%;
+      margin-top: 10px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .success-message {
+    color: #00C851;
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .error-message {
+    color: #ff4444;
+    background: #fbe9e7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #00F5D4;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

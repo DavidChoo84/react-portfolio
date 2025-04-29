@@ -1,0 +1,31 @@
+.logo-container {
+  position: relative;
+  width: 490px; // adjust size as needed
+  height: 400px;
+  margin: auto;
+}
+
+.solid-logo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.sketch-logo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+svg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
